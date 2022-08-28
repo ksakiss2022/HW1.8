@@ -2,7 +2,7 @@
 public class Main {
     public static void main(String[] args) {
         settingTheYear(2022);
-        installingThePhoneProgram(2016, 0);
+        installingThePhoneProgram(2020, 1);
         deliveryDistance(95);
     }
 
@@ -53,17 +53,31 @@ public class Main {
 
     private static void installingThePhoneProgram(int clientDeviceYear, int device) {
 
+        String stringForOutput = "";
         if (clientDeviceYear < 2015) {
-            System.out.print(" Задача 2: Установите облегченную версию приложения по ссылке для ");
+            stringForOutput = " Задача 2: Установите облегченную версию приложения по ссылке";
         } else {
-            System.out.print(" Задача 2: Установите обычную версию приложения для ");
+            stringForOutput = " Задача 2: Установите обычную версию приложения";
         }
-        if (device == 1) {
-            System.out.println("Android по ссылке");
+
+        if (device != 1) {
+            stringForOutput += " для IOS";
         } else {
-            System.out.println("IOS по ссылке");
+            stringForOutput += " для Android";
         }
+        System.out.println(stringForOutput);
     }
+        // if (clientDeviceYear < 2015) {
+        //    System.out.print(" Задача 2: Установите облегченную версию приложения по ссылке для ");
+        //} else {
+        //    System.out.print(" Задача 2: Установите обычную версию приложения для ");
+        //}
+        //if (device == 1) {
+        //    System.out.println("Android по ссылке");
+        //} else {
+        //    System.out.println("IOS по ссылке");
+       // }
+
 
 
     //### Задание 1
