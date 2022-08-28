@@ -1,8 +1,8 @@
 
 public class Main {
     public static void main(String[] args) {
-        settingTheYear(2100);
-        installingThePhoneProgram(2010, 1);
+        settingTheYear(2022);
+        installingThePhoneProgram(2016, 0);
         deliveryDistance(95);
     }
 
@@ -53,15 +53,16 @@ public class Main {
 
     private static void installingThePhoneProgram(int clientDeviceYear, int device) {
 
-        if (clientDeviceYear < 2015 && device == 0) {
-            System.out.println(" Задача 2: Установите облегченную версию приложения для IOS по ссылке");
-        } else if (clientDeviceYear < 2015 && device == 1) {
-            System.out.println(" Задача 2: Установите облегченную версию приложения для Android по ссылке");
+        if (clientDeviceYear < 2015) {
+            System.out.print(" Задача 2: Установите облегченную версию приложения по ссылке для ");
+        } else {
+            System.out.print(" Задача 2: Установите обычную версию приложения для ");
         }
-        if (clientDeviceYear >= 2015 && device == 0) {
-            System.out.println(" Задача 2: Установите версию приложения для IOS по ссылке");
-        } else if (clientDeviceYear >= 2015 && device == 1) {
-            System.out.println(" Задача 2: Установите версию приложения для Android по ссылке");
+        if (device == 1) {
+            System.out.println("Android по ссылке");
+        } else {
+            System.out.println("IOS по ссылке");
+            System.out.println();
         }
     }
 
@@ -77,14 +78,20 @@ public class Main {
 
     private static void settingTheYear(int year) {
 
-        boolean leatyear = (year % 4 == 0 && year % 100 != 0);
+        boolean leatyear = (year % 4 == 0 && year % 100 != 0||year % 4 == 0 && year % 100 == 0 && year % 400 == 0);
         if (leatyear) {
-            System.out.println(" Задача 1: Год является високосным");
-        } else if (year % 4 == 0 && year % 100 == 0 && year % 400 == 0) {
             System.out.println(" Задача 1: Год является високосным");
         } else {
             System.out.println(" Задача 1: Год не является високосным");
         }
-
+        // boolean leatyear = (year % 4 == 0 && year % 100 != 0);
+        //        if (leatyear) {
+        //            System.out.println(" Задача 1: Год является високосным");
+        //        } else if (year % 4 == 0 && year % 100 == 0 && year % 400 == 0) {
+        //            System.out.println(" Задача 1: Год является високосным");
+        //        } else {
+        //            System.out.println(" Задача 1: Год не является високосным");
+        //        }
     }
 }
+
