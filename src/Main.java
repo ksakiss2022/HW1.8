@@ -62,7 +62,6 @@ public class Main {
             System.out.println("Android по ссылке");
         } else {
             System.out.println("IOS по ссылке");
-            System.out.println();
         }
     }
 
